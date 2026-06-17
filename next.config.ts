@@ -1,13 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  typescript: {
-    tsconfigPath: "./tsconfig.json"
-  },
+  allowedDevOrigins: [
+    "192.168.1.79",
+    "10.8.0.3"
+  ],
+
   experimental: {
-    optimizePackageImports: ["@taghdisilabs/*"]
+    optimizePackageImports: ["framer-motion"]
   }
 };
 
