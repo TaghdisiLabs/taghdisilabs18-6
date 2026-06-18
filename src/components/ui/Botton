@@ -1,25 +1,12 @@
-import { ReactNode } from "react";
-import { cn } from "@/lib/utils";
+"use client";
 
 export default function Button({
   children,
-  className,
-  onClick,
 }: {
-  children: ReactNode;
-  className?: string;
-  onClick?: () => void;
+  children: React.ReactNode;
 }) {
   return (
-    <button
-      onClick={onClick}
-      className={cn(
-        "px-6 py-3 rounded-xl font-medium transition-all duration-300",
-        "bg-gradient-to-r from-[#7c5cff] to-[#00ffd5] text-black",
-        "hover:scale-105 active:scale-95",
-        className
-      )}
-    >
+    <button className="px-6 py-3 rounded-xl bg-white text-black font-semibold hover:scale-105 transition">
       {children}
     </button>
   );
