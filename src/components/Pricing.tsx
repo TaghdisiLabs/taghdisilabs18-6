@@ -1,73 +1,37 @@
-"use client";
+'use client';
 
 import { motion } from "framer-motion";
 
+const plans = [
+  { name: "Starter", price: "$49", features: ["Landing Page", "Basic UI", "Email Setup"] },
+  { name: "Growth", price: "$199", features: ["Full Website", "Animations", "AI Integration"] },
+  { name: "Scale", price: "$499", features: ["Full System", "Automation", "Deployment"] },
+];
+
 export default function Pricing() {
-  const plans = [
-    {
-      price: "$60",
-      name: "Starter Audit",
-      features: ["Website analysis", "Bug report", "15min call"],
-    },
-    {
-      price: "$150",
-      name: "Growth Plan",
-      features: ["Audit + fixes", "Strategy plan", "Consultation"],
-    },
-    {
-      price: "$600",
-      name: "Business System",
-      features: ["Automation design", "Growth engine", "Optimization"],
-    },
-    {
-      price: "$1500",
-      name: "AI Infrastructure",
-      features: ["Full AI system", "Scaling architecture", "Enterprise setup"],
-    },
-  ];
-
   return (
-    <section id="pricing" className="py-32 section-container">
+    <section className="py-24 px-6">
 
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        className="text-4xl font-black text-center mb-16"
-      >
-        Pricing Plans
-      </motion.h2>
+      <h2 className="text-4xl font-bold text-center mb-12">
+        Pricing
+      </h2>
 
-      <div className="grid md:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
         {plans.map((p, i) => (
           <motion.div
             key={i}
             whileHover={{ scale: 1.05 }}
-            className="
-              glass
-              p-6
-              rounded-2xl
-              border
-              border-white/10
-              hover:border-cyan-400/40
-              transition-all
-            "
+            className="p-6 rounded-2xl bg-white/5 border border-white/10"
           >
-            <div className="text-cyan-400 text-2xl font-bold">
-              {p.price}
-            </div>
+            <h3 className="text-xl font-semibold">{p.name}</h3>
+            <p className="text-3xl font-bold my-4">{p.price}</p>
 
-            <div className="font-bold mt-2">{p.name}</div>
-
-            <ul className="mt-4 text-white/60 text-sm space-y-2">
-              {p.features.map((f, i) => (
-                <li key={i}>• {f}</li>
+            <ul className="space-y-2 text-gray-400">
+              {p.features.map((f, j) => (
+                <li key={j}>• {f}</li>
               ))}
             </ul>
-
-            <button className="mt-6 w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-bold">
-              Choose
-            </button>
           </motion.div>
         ))}
 
