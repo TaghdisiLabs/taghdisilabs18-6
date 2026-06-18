@@ -1,8 +1,10 @@
-import { ReactNode } from "react";
-
-export default function Card({ children }: { children: ReactNode }) {
+export default function Card({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div className="glass rounded-[18px] p-6 transition-all hover:scale-[1.02] duration-300">
+    <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
       {children}
     </div>
   );
