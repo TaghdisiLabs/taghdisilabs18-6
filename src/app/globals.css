@@ -29,6 +29,22 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* ultra motion feel */
+* {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
 html {
   scroll-behavior: smooth;
 }
