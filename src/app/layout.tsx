@@ -1,9 +1,5 @@
 import "./globals.css";
-
-export const metadata = {
-  title: "Taghdisi Labs",
-  description: "AI-powered cinematic digital systems",
-};
+import Cursor from "@/components/cursor/Cursor";
 
 export default function RootLayout({
   children,
@@ -13,6 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black text-white overflow-x-hidden">
+        <Cursor />
         {children}
       </body>
     </html>
