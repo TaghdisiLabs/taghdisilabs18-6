@@ -1,28 +1,21 @@
-"use client";
-
-import Button from "@/components/ui/Button";
-import { MotionDiv } from "@/components/motion/Motion";
+import Scene from "@/components/motion/Scene";
 
 export default function CTA() {
   return (
-    <section className="section text-center">
-      <MotionDiv>
+    <Scene>
+      <section className="text-center py-32">
         <h2 className="text-5xl font-bold">
-          Let’s Build Something <span className="gradient-text">Iconic</span>
+          Build Something That Feels Alive
         </h2>
-      </MotionDiv>
 
-      <MotionDiv>
-        <p className="text-white/60 mt-6 max-w-xl mx-auto">
-          Your brand deserves a system, not just a website. We build living AI-driven experiences.
+        <p className="text-white/60 mt-6">
+          Systems, interfaces, and brands powered by motion intelligence
         </p>
-      </MotionDiv>
 
-      <MotionDiv>
-        <div className="mt-8">
-          <Button>Start Now</Button>
-        </div>
-      </MotionDiv>
-    </section>
+        <button className="mt-10 px-10 py-4 bg-white text-black rounded-xl font-semibold hover:scale-105">
+          Start Now
+        </button>
+      </section>
+    </Scene>
   );
 }
