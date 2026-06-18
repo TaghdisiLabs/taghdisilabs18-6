@@ -1,5 +1,10 @@
 import "./globals.css";
 
+export const metadata = {
+  title: "Taghdisi Labs",
+  description: "AI-powered cinematic digital systems",
+};
+
 export default function RootLayout({
   children,
 }: {
