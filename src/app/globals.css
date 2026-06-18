@@ -53,6 +53,18 @@ html {
   transition: all 0.3s ease;
 }
 
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
 ::selection {
   background: #7c5cff;
   color: white;
