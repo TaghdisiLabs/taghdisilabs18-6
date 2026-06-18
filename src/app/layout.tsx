@@ -1,10 +1,5 @@
 import "./globals.css";
 
-export const metadata = {
-  title: "MiniTZ System | TaghdisiLabs",
-  description: "AI Agents System Landing",
-};
-
 export default function RootLayout({
   children,
 }: {
