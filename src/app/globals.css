@@ -28,3 +28,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  transition: all 0.3s ease;
+}
+
+::selection {
+  background: #7c5cff;
+  color: white;
+}
