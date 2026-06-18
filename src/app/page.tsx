@@ -1,11 +1,21 @@
-import HeroV4 from "@/components/HeroV4";
-import StoryScroll from "@/components/StoryScroll";
+import Hero from "@/components/hero/Hero";
+import Services from "@/components/services/Services";
+import Portfolio from "@/components/portfolio/Portfolio";
+import CTA from "@/components/cta/CTA";
+import BackgroundFX from "@/components/background/BackgroundFX";
+import MiniTZ from "@/components/mini-tz/MiniTZ";
 
 export default function Home() {
   return (
-    <main className="bg-black text-white overflow-x-hidden">
-      <HeroV4 />
-      <StoryScroll />
+    <main className="relative text-white">
+      <BackgroundFX />
+
+      <Hero />
+      <Services />
+      <Portfolio />
+      <CTA />
+
+      <MiniTZ />
     </main>
   );
 }
