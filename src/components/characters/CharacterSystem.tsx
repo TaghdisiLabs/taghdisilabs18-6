@@ -1,15 +1,38 @@
 'use client';
 
-export default function BackgroundFX() {
+import { motion } from "framer-motion";
+
+export default function CharacterSystem() {
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0 pointer-events-none">
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#050816] to-black" />
+      <motion.img
+        src="/scoutT.png"
+        className="w-20 absolute left-10 top-24"
+        animate={{ y: [0, -25, 0] }}
+        transition={{ duration: 4, repeat: Infinity }}
+      />
 
-      <div className="absolute top-[-200px] left-[-200px] w-[700px] h-[700px] bg-blue-500/20 blur-[150px] rounded-full" />
-      <div className="absolute bottom-[-200px] right-[-200px] w-[700px] h-[700px] bg-cyan-400/20 blur-[150px] rounded-full" />
+      <motion.img
+        src="/ninjaT.png"
+        className="w-20 absolute right-10 top-40"
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ duration: 2.5, repeat: Infinity }}
+      />
 
-      <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:40px_40px]" />
+      <motion.img
+        src="/builderT.png"
+        className="w-24 absolute left-1/3 bottom-20"
+        animate={{ rotate: [0, 1, -1, 0] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      />
+
+      <motion.img
+        src="/captainT.png"
+        className="w-24 absolute right-1/3 bottom-28"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 5, repeat: Infinity }}
+      />
 
     </div>
   );
