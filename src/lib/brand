@@ -1,0 +1,10 @@
+export const BRAND = {
+  name: "TaghdisiLabs",
+  slogan: "AI Systems That Feel Alive",
+  style: "cinematic-minimal-ai",
+  colors: {
+    primary: "#7c5cff",
+    secondary: "#00ffd5",
+    background: "#000000",
+  },
+};
