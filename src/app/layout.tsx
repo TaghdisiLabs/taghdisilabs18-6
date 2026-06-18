@@ -1,9 +1,10 @@
 import "./globals.css";
 import BackgroundFX from "@/components/BackgroundFX";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "TaghdisiLabs Digital",
-  description: "AI Growth Systems for modern businesses"
+  title: "TaghdisiLabs",
+  description: "Cinematic AI Sales Engine",
 };
 
 export default function RootLayout({
@@ -13,11 +14,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black">
+      <body className="bg-black text-white overflow-x-hidden">
+        
+        {/* GLOBAL BACKGROUND */}
         <BackgroundFX />
-        <div className="relative z-10">
-          {children}
-        </div>
+
+        {/* NAVBAR */}
+        <Navbar />
+
+        {/* MAIN CONTENT */}
+        <main className="relative z-10">{children}</main>
+
       </body>
     </html>
   );
