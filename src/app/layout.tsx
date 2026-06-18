@@ -1,10 +1,8 @@
 import "./globals.css";
-import BackgroundFX from "@/components/BackgroundFX";
-import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "TaghdisiLabs",
-  description: "Cinematic AI Sales Engine",
+  title: "MiniTZ System | TaghdisiLabs",
+  description: "AI Agents System Landing",
 };
 
 export default function RootLayout({
@@ -15,16 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black text-white overflow-x-hidden">
-        
-        {/* GLOBAL BACKGROUND */}
-        <BackgroundFX />
-
-        {/* NAVBAR */}
-        <Navbar />
-
-        {/* MAIN CONTENT */}
-        <main className="relative z-10">{children}</main>
-
+        {children}
       </body>
     </html>
   );
