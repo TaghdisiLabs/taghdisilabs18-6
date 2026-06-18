@@ -1,51 +1,38 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import CharacterSystem from "./characters/CharacterSystem";
+import BackgroundFX from "./BackgroundFX";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center text-center px-6">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
-      <div className="max-w-3xl">
+      <BackgroundFX />
+      <CharacterSystem />
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-5xl md:text-7xl font-semibold tracking-tight glow-text"
-        >
-          Build Intelligent
-          <span className="text-cyan-400"> Growth Systems</span>
-        </motion.h1>
+      <div className="relative z-10 text-center max-w-4xl px-6">
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="text-white/60 mt-6 text-lg"
-        >
-          TaghdisiLabs designs AI-driven systems that scale businesses automatically with precision and clarity.
-        </motion.p>
+        <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          FROM VISION
+          <span className="text-blue-400"> TO VELOCITY</span>
+        </h1>
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
-          className="mt-10 flex gap-4 justify-center"
-        >
+        <p className="mt-6 text-gray-300 text-lg">
+          MiniTZ AI System — where Scout, Ninja, Builder, Captain
+          transform ideas into scalable systems.
+        </p>
 
-          <button className="px-6 py-3 rounded-xl bg-white text-black font-medium hover:scale-105 transition">
-            Book Strategy Call
+        <div className="mt-8 flex gap-4 justify-center">
+          <button className="px-6 py-3 bg-blue-500 rounded-xl">
+            Book Discovery Call
           </button>
 
-          <button className="px-6 py-3 rounded-xl glass text-white hover:bg-white/10 transition">
-            Explore Systems
+          <button className="px-6 py-3 border border-white/20 rounded-xl">
+            Explore System
           </button>
-
-        </motion.div>
+        </div>
 
       </div>
-
     </section>
   );
 }
