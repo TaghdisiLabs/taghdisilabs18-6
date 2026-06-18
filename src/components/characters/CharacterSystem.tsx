@@ -15,9 +15,9 @@ export default function CharacterSystem() {
 
       <motion.img
         src="/ninjaT.png"
-        className="w-20 absolute right-16 top-40"
+        className="w-20 absolute right-10 top-40"
         animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        transition={{ duration: 2.5, repeat: Infinity }}
       />
 
       <motion.img
@@ -29,7 +29,7 @@ export default function CharacterSystem() {
 
       <motion.img
         src="/captainT.png"
-        className="w-24 absolute right-1/3 bottom-32"
+        className="w-24 absolute right-1/3 bottom-28"
         animate={{ rotate: [0, 2, -2, 0] }}
         transition={{ duration: 5, repeat: Infinity }}
       />
