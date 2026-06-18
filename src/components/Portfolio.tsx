@@ -1,46 +1,32 @@
-"use client";
+'use client';
 
 import { motion } from "framer-motion";
 
+const items = [
+  "AI Systems",
+  "Automation Engines",
+  "SaaS Platforms",
+  "Startup Launches"
+];
+
 export default function Portfolio() {
-  const projects = [
-    "AI Automation System",
-    "SaaS Growth Engine",
-    "E-commerce Optimization",
-    "Brand Intelligence Platform",
-  ];
-
   return (
-    <section id="portfolio" className="py-32 section-container">
+    <section className="py-24 px-6">
 
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        className="text-4xl font-black text-center mb-16"
-      >
-        Proven <span className="gradient-text">Systems</span>
-      </motion.h2>
+      <h2 className="text-4xl font-bold text-center mb-12">
+        Our Work
+      </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
 
-        {projects.map((p, i) => (
+        {items.map((item, i) => (
           <motion.div
             key={i}
-            whileHover={{ scale: 1.03 }}
-            className="
-              glass
-              p-10
-              rounded-2xl
-              border
-              border-white/10
-              hover:border-cyan-400/40
-              transition-all
-            "
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="p-10 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-white/10"
           >
-            <div className="text-xl font-bold">{p}</div>
-            <p className="text-white/60 mt-3">
-              Designed for automation, scale and revenue acceleration.
-            </p>
+            <h3 className="text-2xl font-semibold">{item}</h3>
           </motion.div>
         ))}
 
