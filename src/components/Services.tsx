@@ -2,32 +2,35 @@
 
 import { motion } from "framer-motion";
 
-const services = [
-  { title: "AI Automation", desc: "Build intelligent workflows that scale businesses." },
-  { title: "Growth Systems", desc: "Turn traffic into revenue with structured systems." },
-  { title: "Web Engineering", desc: "High-performance Next.js production systems." },
+const steps = [
+  { title: "1. Scout AI", desc: "Analyzes opportunity landscape" },
+  { title: "2. Ninja AI", desc: "Executes automation flows" },
+  { title: "3. Builder AI", desc: "Constructs scalable systems" },
+  { title: "4. Captain AI", desc: "Controls growth strategy" },
 ];
 
 export default function Services() {
   return (
-    <section className="py-24 px-6 relative z-10">
-      
-      <h2 className="text-4xl font-bold text-center mb-12">
-        What We Build
+    <section className="py-32 px-6">
+
+      <h2 className="text-4xl font-bold text-center mb-16">
+        How MiniTZ Works
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto space-y-6">
 
-        {services.map((s, i) => (
+        {steps.map((s, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:scale-105 transition"
+            className="p-6 rounded-2xl bg-white/5 border border-white/10"
           >
-            <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-            <p className="text-gray-400">{s.desc}</p>
+            <h3 className="text-xl font-semibold text-blue-400">
+              {s.title}
+            </h3>
+            <p className="text-gray-400 mt-2">{s.desc}</p>
           </motion.div>
         ))}
 
