@@ -1,45 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html, body {
-  background: #05060a;
+:root {
+  --bg: #05060a;
+  --primary: #7c3aed;
+  --accent: #06b6d4;
+}
+
+body {
+  background: radial-gradient(circle at top, #0a0f1f, #000000);
   color: white;
-  font-family: Inter, sans-serif;
-  scroll-behavior: smooth;
+  font-family: Inter, system-ui, sans-serif;
 }
 
-/* Smooth premium scroll feel */
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* cinematic glow system */
+.glow {
+  box-shadow: 0 0 60px rgba(124, 58, 237, 0.25);
 }
 
-/* Glass system (Apple-like) */
 .glass {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(20px);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Soft glow text */
-.glow-text {
-  text-shadow: 0 0 30px rgba(34,211,238,0.3);
-}
-
-/* Scroll reveal base */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px) scale(0.98);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* Subtle noise */
-.noise {
-  background-image: url("https://www.transparenttextures.com/patterns/noise.png");
-  opacity: 0.04;
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
